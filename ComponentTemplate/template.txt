@@ -11,3 +11,10 @@ export const PageLoader = ({ className }: PageLoaderProps) => {
         <div className={classNames(cls.Sidebar, {}, [className])}></div>
     )
 };
+
+
+describe('getCounter', () => {
+    test('should return counter value', () => {
+        expect(getCounter(state as StateSchema)).toEqual({ value: 10 });
+    });
+});
