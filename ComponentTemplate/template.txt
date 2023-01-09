@@ -1,14 +1,19 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import cls from './PageLoader.module.scss';
+import { useTranslation } from 'react-i18next';
+import cls from './LoginForm.module.scss';
 
-interface PageLoaderProps {
+
+interface LoginFormProps {
     className?: string;
 }
 
-export const PageLoader = ({ className }: PageLoaderProps) => {
-
+export const LoginForm = ({ className }: LoginFormProps) => {
+    const { t } = useTranslation()
+    
     return (
-        <div className={classNames(cls.Sidebar, {}, [className])}></div>
+        <div className={classNames(cls.LoginForm, {}, [className])}>
+
+        </div>
     )
 };
 
